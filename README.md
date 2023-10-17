@@ -12,7 +12,7 @@ N/A
 
 This application can be used to quickly make a custom SVG logo (without paying a designer) for your next business venture by using the command-line. This saves the user time and money versus having to manually create their own logo.
 
-[Link to Video with SVG Logo Maker walk-through]()
+[Link to Video with SVG Logo Maker walk-through](https://youtu.be/zgUDhKz81dA?si=GnhEp_xY9NletZcY)
 
 The logo made for you will look along the lines of this, with user's custom input entered:
 ![screenshot](./screenshot.jpg)
