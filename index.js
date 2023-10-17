@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
+const Square = require('./lib/square')
+const Triangle =require('./lib/triangle')
+const Circle =require('./lib/circle')
 
 const questions = [
     {
@@ -24,23 +27,19 @@ const questions = [
 
 
 inquirer
-.prompt(questions)
-        .then((data) => {
-            if (data.shape === Triangle) {
-
-            }  else if (data.shape === Square) {
-
-            } else {
-                
-            }
-            const logo = new Triangle(
-                data.text,
-                data.textColor,
-                data.shape,
-                data.shapeColor
-              );
-            fs.writeFile('./examples/logo.svg', logo, (err) =>
-                err ? console.log(err) : console.log('Success! Your custom logo has been made at logo.svg.')
-            );
-        })
+    .prompt(questions)
+    .then((data) => {
+        let shape;
+        if (data.shape === 'Triangle') {
+            shape = new Triangle(data.text, data.textColor, 'polygon', data.shapeColor)
+        } else if (data.shape === 'Square') {
+            shape = new Square(data.text, data.textColor, 'rect', data.shapeColor)
+        } else {
+            shape = new Circle(data.text, data.textColor, 'circle', data.shapeColor)
+        }
+    
+        fs.writeFile('./examples/logo.svg', shape.render(), (err) =>
+            err ? console.log(err) : console.log('Success! Your custom logo has been made at logo.svg.')
+        );
+    })
 
