@@ -15,7 +15,7 @@ This application can be used to quickly make a custom SVG logo (without paying a
 [Link to Video with SVG Logo Maker walk-through]()
 
 The logo made for you will look along the lines of this, with user's custom input entered:
-![screenshot]()
+![screenshot](./screenshot.jpg)
 
 
 ## Credits
